@@ -6,6 +6,6 @@ class_name Coin
 var taken = false
 
 func _on_coin_body_enter(body):
-	if not taken and body is Player:
+	if not taken and body is Player or Player2:
 		($Anim as AnimationPlayer).play("taken")
 		taken = true
