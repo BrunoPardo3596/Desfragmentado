@@ -41,12 +41,12 @@ func _physics_process(delta):
 	# Horizontal movement
 	var target_speed = 0
 	if Input.is_action_pressed("move_left"):
-		target_speed -= 1
+		target_speed = -1.2
 	if Input.is_action_pressed("move_right"):
-		target_speed += 1
+		target_speed = 1.2
 
 	target_speed *= WALK_SPEED
-	linear_vel.x = lerp(linear_vel.x, target_speed, 0.1)
+	linear_vel.x = lerp(linear_vel.x, target_speed, 0.5)
 
 	# Jumping
 	if on_floor and Input.is_action_just_pressed("jump"):
@@ -54,7 +54,7 @@ func _physics_process(delta):
 		($SoundJump as AudioStreamPlayer2D).play()
 
 	# Shooting
-	if Input.is_action_just_pressed("shoot"):
+	if Input.is_action_just_pressed("shoot") and shoot_time > 0.4:
 		var bullet = Bullet.instance()
 		bullet.position = ($Sprite/BulletShoot as Position2D).global_position # use node for shoot position
 		bullet.linear_velocity = Vector2(sprite.scale.x * BULLET_VELOCITY, 0)

@@ -40,12 +40,12 @@ func _physics_process(delta):
 	# Horizontal movement
 	var target_speed = 0
 	if Input.is_action_pressed("ui2_left"):
-		target_speed -= 1
+		target_speed = -1.2
 	if Input.is_action_pressed("ui2_right"):
-		target_speed += 1
+		target_speed = 1.2
 
 	target_speed *= WALK_SPEED
-	linear_vel.x = lerp(linear_vel.x, target_speed, 0.1)
+	linear_vel.x = lerp(linear_vel.x, target_speed, 0.5)
 
 	# Jumping
 	if on_floor and Input.is_action_just_pressed("ui2_up"):
@@ -53,7 +53,7 @@ func _physics_process(delta):
 		($SoundJump as AudioStreamPlayer2D).play()
 
 	# Shooting
-	if Input.is_action_just_pressed("shoot2"):
+	if Input.is_action_just_pressed("shoot2") and shoot_time > 0.4:
 		var bullet = Bullet.instance()
 		bullet.position = ($Sprite/BulletShoot as Position2D).global_position # use node for shoot position
 		bullet.linear_velocity = Vector2(sprite.scale.x * BULLET_VELOCITY, 0)
@@ -78,9 +78,9 @@ func _physics_process(delta):
 		# We want the character to immediately change facing side when the player
 		# tries to change direction, during air control.
 		# This allows for example the player to shoot quickly left then right.
-		if Input.is_action_pressed("move_left") and not Input.is_action_pressed("move_right"):
+		if Input.is_action_pressed("ui2_left") and not Input.is_action_pressed("ui2_right"):
 			sprite.scale.x = -1
-		if Input.is_action_pressed("move_right") and not Input.is_action_pressed("move_left"):
+		if Input.is_action_pressed("ui2_right") and not Input.is_action_pressed("ui2_left"):
 			sprite.scale.x = 1
 
 		if linear_vel.y < 0:
