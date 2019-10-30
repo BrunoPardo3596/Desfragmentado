@@ -96,5 +96,9 @@ func _physics_process(delta):
 		anim = new_anim
 		($Anim as AnimationPlayer).play(anim)
 
-func hit_by_bullet():
-	linear_vel.x = -1000
+func hit_by_bullet(positionBla):
+	print(positionBla)
+	if(positionBla.x > position.x):
+		linear_vel.x = -1000
+	else:
+		linear_vel.x = 1000
