@@ -11,7 +11,10 @@ const JUMP_SPEED = 480
 const SIDING_CHANGE_SPEED = 10
 const BULLET_VELOCITY = 1000
 const SHOOT_TIME_SHOW_WEAPON = 0.2
-
+var JUMP_BUTTON
+var LEFT_BUTTON
+var RIGHT_BUTTON
+var SHOOT_BUTTON
 var linear_vel = Vector2()
 var shoot_time = 99999 # time since last shot
 
@@ -40,21 +43,21 @@ func _physics_process(delta):
 
 	# Horizontal movement
 	var target_speed = 0
-	if Input.is_action_pressed("move_left"):
+	if Input.is_action_pressed(LEFT_BUTTON):
 		target_speed = -1.2
-	if Input.is_action_pressed("move_right"):
+	if Input.is_action_pressed(RIGHT_BUTTON):
 		target_speed = 1.2
 
 	target_speed *= WALK_SPEED
 	linear_vel.x = lerp(linear_vel.x, target_speed, 0.5)
 
 	# Jumping
-	if on_floor and Input.is_action_just_pressed("jump"):
+	if on_floor and Input.is_action_just_pressed(JUMP_BUTTON):
 		linear_vel.y = -JUMP_SPEED
 		($SoundJump as AudioStreamPlayer2D).play()
 
 	# Shooting
-	if Input.is_action_just_pressed("shoot") and shoot_time > 0.4:
+	if Input.is_action_just_pressed(SHOOT_BUTTON) and shoot_time > 0.4:
 		var bullet = Bullet.instance()
 		bullet.position = ($Sprite/BulletShoot as Position2D).global_position # use node for shoot position
 		bullet.linear_velocity = Vector2(sprite.scale.x * BULLET_VELOCITY, 0)
@@ -95,6 +98,11 @@ func _physics_process(delta):
 	if new_anim != anim:
 		anim = new_anim
 		($Anim as AnimationPlayer).play(anim)
+
+func get_item(item_name):
+	print(item_name)
+	if(item_name == "blue_cow"):
+		linear_vel.y = -1000
 
 func hit_by_bullet(positionBullet):
 	if(positionBullet.x > position.x):

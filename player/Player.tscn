@@ -183,7 +183,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="CapsuleShape2D" id=11]
-height = 44.4787
+height = 25.1542
 
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 1 )
@@ -199,7 +199,7 @@ position = Vector2( 20.7312, 3.21187 )
 rotation = -1.45648
 
 [node name="BulletShoot" type="Position2D" parent="Sprite"]
-position = Vector2( 30.6589, 6.13176 )
+position = Vector2( 18.659, 6.132 )
 
 [node name="Anim" type="AnimationPlayer" parent="."]
 anims/crouch = SubResource( 1 )
@@ -219,7 +219,7 @@ limit_left = 0
 limit_top = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0.291992, -0.835023 )
+position = Vector2( -5.65198, 9.43184 )
 shape = SubResource( 11 )
 
 [node name="SoundJump" type="AudioStreamPlayer2D" parent="."]
@@ -260,4 +260,3 @@ scale = Vector2( 1.49157, 1.46265 )
 normal = ExtResource( 8 )
 action = "shoot"
 visibility_mode = 1
-
