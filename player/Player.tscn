@@ -192,7 +192,7 @@ script = ExtResource( 1 )
 texture = ExtResource( 2 )
 vframes = 2
 hframes = 16
-frame = 22
+frame = 26
 
 [node name="Smoke" type="Node2D" parent="Sprite"]
 position = Vector2( 20.7312, 3.21187 )

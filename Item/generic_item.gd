@@ -17,5 +17,5 @@ func _on_item_body_entered(body):
 		#($Anim as AnimationPlayer).play("taken")
 		if body.has_method("get_item"):
 			body.call("get_item", ITEM_NAME)
+			(get_node("Anim") as AnimationPlayer).play("taken")
 		taken = true
-	pass # Replace with function body.
