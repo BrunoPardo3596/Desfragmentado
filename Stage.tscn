@@ -1,10 +1,9 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://TileSet.tres" type="TileSet" id=1]
 [ext_resource path="res://coin/Coin.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Item/soul/soul.gd" type="Script" id=3]
-[ext_resource path="res://platform/MovingPlatform.tscn" type="PackedScene" id=3]
-[ext_resource path="res://background/tile.png" type="Texture" id=4]
+[ext_resource path="res://platform/MovingPlatform.tscn" type="PackedScene" id=4]
 [ext_resource path="res://platform/OneWayPlatform.tscn" type="PackedScene" id=5]
 [ext_resource path="res://player/Player.tscn" type="PackedScene" id=6]
 [ext_resource path="res://player/Player1.gd" type="Script" id=7]
@@ -16,6 +15,7 @@
 [ext_resource path="res://enemy/Enemy.tscn" type="PackedScene" id=13]
 [ext_resource path="res://background/ParallaxBg.tscn" type="PackedScene" id=14]
 [ext_resource path="res://audio/music.ogg" type="AudioStream" id=15]
+[ext_resource path="res://background/tile.png" type="Texture" id=16]
 
 [node name="Stage" type="Node"]
 
@@ -248,117 +248,117 @@ editor/display_folded = true
 [node name="tile" type="Sprite" parent="Props/Node2D4"]
 position = Vector2( 177.414, 2594.17 )
 scale = Vector2( 0.677251, 0.677251 )
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 
 [node name="tile20" type="Sprite" parent="Props/Node2D4"]
 position = Vector2( 129.706, 2593.59 )
 scale = Vector2( 0.677251, 0.677251 )
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 
 [node name="tile21" type="Sprite" parent="Props/Node2D4"]
 position = Vector2( 82.5733, 2593.59 )
 scale = Vector2( 0.677251, 0.677251 )
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 
 [node name="tile22" type="Sprite" parent="Props/Node2D4"]
 position = Vector2( 49.2355, 2593.02 )
 scale = Vector2( 0.677251, 0.677251 )
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 
 [node name="tile23" type="Sprite" parent="Props/Node2D4"]
 position = Vector2( 29.6926, 2593.59 )
 scale = Vector2( 0.677251, 0.677251 )
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 
 [node name="tile18" type="Sprite" parent="Props/Node2D4"]
 position = Vector2( 621.985, 2593.43 )
 scale = Vector2( 0.682413, 0.677251 )
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 
 [node name="tile2" type="Sprite" parent="Props/Node2D4"]
 position = Vector2( 226.484, 2593.23 )
 scale = Vector2( 0.677251, 0.677251 )
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 
 [node name="tile13" type="Sprite" parent="Props/Node2D4"]
 position = Vector2( 667.55, 2592.98 )
 scale = Vector2( 0.677251, 0.677251 )
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 
 [node name="tile3" type="Sprite" parent="Props/Node2D4"]
 position = Vector2( 278.47, 2593.23 )
 scale = Vector2( 0.677251, 0.677251 )
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 
 [node name="tile10" type="Sprite" parent="Props/Node2D4"]
 position = Vector2( 720.017, 2592.98 )
 scale = Vector2( 0.677251, 0.677251 )
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 
 [node name="tile4" type="Sprite" parent="Props/Node2D4"]
 position = Vector2( 325.773, 2593.23 )
 scale = Vector2( 0.677251, 0.677251 )
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 
 [node name="tile14" type="Sprite" parent="Props/Node2D4"]
 position = Vector2( 767.8, 2594.42 )
 scale = Vector2( 0.677251, 0.677251 )
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 
 [node name="tile5" type="Sprite" parent="Props/Node2D4"]
 position = Vector2( 373.077, 2593.23 )
 scale = Vector2( 0.677251, 0.677251 )
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 
 [node name="tile17" type="Sprite" parent="Props/Node2D4"]
 position = Vector2( 818.943, 2594.42 )
 scale = Vector2( 0.677251, 0.677251 )
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 
 [node name="tile6" type="Sprite" parent="Props/Node2D4"]
 position = Vector2( 420.848, 2593.23 )
 scale = Vector2( 0.677251, 0.677251 )
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 
 [node name="tile15" type="Sprite" parent="Props/Node2D4"]
 position = Vector2( 866.714, 2594.42 )
 scale = Vector2( 0.677251, 0.677251 )
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 
 [node name="tile7" type="Sprite" parent="Props/Node2D4"]
 position = Vector2( 474.24, 2593.23 )
 scale = Vector2( 0.677251, 0.677251 )
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 
 [node name="tile11" type="Sprite" parent="Props/Node2D4"]
 position = Vector2( 918.666, 2592.02 )
 scale = Vector2( 0.677251, 0.677251 )
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 
 [node name="tile8" type="Sprite" parent="Props/Node2D4"]
 position = Vector2( 525.758, 2593.23 )
 scale = Vector2( 0.677251, 0.677251 )
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 
 [node name="tile12" type="Sprite" parent="Props/Node2D4"]
 position = Vector2( 971.144, 2592.98 )
 scale = Vector2( 0.677251, 0.677251 )
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 
 [node name="tile9" type="Sprite" parent="Props/Node2D4"]
 position = Vector2( 574.466, 2593.7 )
 scale = Vector2( 0.677251, 0.677251 )
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 
 [node name="tile16" type="Sprite" parent="Props/Node2D4"]
 position = Vector2( 1018.41, 2593.45 )
 scale = Vector2( 0.677251, 0.677251 )
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 
 [node name="tile19" type="Sprite" parent="Props/Node2D4"]
 position = Vector2( 1055.37, 2593.45 )
 scale = Vector2( 0.677251, 0.677251 )
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 
 [node name="Node2D5" type="Node2D" parent="Props"]
 editor/display_folded = true
@@ -366,47 +366,47 @@ editor/display_folded = true
 [node name="tile" type="Sprite" parent="Props/Node2D5"]
 position = Vector2( 29.1467, 2528.66 )
 scale = Vector2( 0.767358, 0.767358 )
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 
 [node name="tile2" type="Sprite" parent="Props/Node2D5"]
 position = Vector2( 28.3486, 2394.58 )
 scale = Vector2( 0.767358, 0.767358 )
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 
 [node name="tile3" type="Sprite" parent="Props/Node2D5"]
 position = Vector2( 27.9496, 2460.03 )
 scale = Vector2( 0.767358, 0.767358 )
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 
 [node name="tile4" type="Sprite" parent="Props/Node2D5"]
 position = Vector2( 31.541, 2321.96 )
 scale = Vector2( 0.767358, 0.767358 )
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 
 [node name="tile5" type="Sprite" parent="Props/Node2D5"]
 position = Vector2( 31.541, 2249.73 )
 scale = Vector2( 0.767358, 0.767358 )
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 
 [node name="tile6" type="Sprite" parent="Props/Node2D5"]
 position = Vector2( 30.3438, 2178.3 )
 scale = Vector2( 0.767358, 0.767358 )
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 
 [node name="tile7" type="Sprite" parent="Props/Node2D5"]
 position = Vector2( 28.7477, 2106.07 )
 scale = Vector2( 0.767358, 0.767358 )
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 
 [node name="tile8" type="Sprite" parent="Props/Node2D5"]
 position = Vector2( 29.5458, 2033.45 )
 scale = Vector2( 0.767358, 0.767358 )
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 
 [node name="tile9" type="Sprite" parent="Props/Node2D5"]
 position = Vector2( 30.3438, 1958.82 )
 scale = Vector2( 0.767358, 0.767358 )
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 
 [node name="Node2D6" type="Node2D" parent="Props"]
 editor/display_folded = true
@@ -414,112 +414,112 @@ editor/display_folded = true
 [node name="tile9" type="Sprite" parent="Props/Node2D6"]
 position = Vector2( 83.2148, 1949.74 )
 scale = Vector2( 0.636774, 0.636774 )
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 
 [node name="tile10" type="Sprite" parent="Props/Node2D6"]
 position = Vector2( 129.513, 1950.14 )
 scale = Vector2( 0.636774, 0.636774 )
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 
 [node name="tile11" type="Sprite" parent="Props/Node2D6"]
 position = Vector2( 178.185, 1950.53 )
 scale = Vector2( 0.636774, 0.636774 )
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 
 [node name="tile12" type="Sprite" parent="Props/Node2D6"]
 position = Vector2( 226.858, 1951.32 )
 scale = Vector2( 0.636774, 0.636774 )
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 
 [node name="tile13" type="Sprite" parent="Props/Node2D6"]
 position = Vector2( 277.904, 1952.91 )
 scale = Vector2( 0.636774, 0.636774 )
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 
 [node name="tile14" type="Sprite" parent="Props/Node2D6"]
 position = Vector2( 328.159, 1950.93 )
 scale = Vector2( 0.636774, 0.636774 )
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 
 [node name="tile15" type="Sprite" parent="Props/Node2D6"]
 position = Vector2( 379.206, 1952.11 )
 scale = Vector2( 0.636774, 0.636774 )
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 
 [node name="tile16" type="Sprite" parent="Props/Node2D6"]
 position = Vector2( 431.044, 1951.32 )
 scale = Vector2( 0.636774, 0.636774 )
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 
 [node name="tile17" type="Sprite" parent="Props/Node2D6"]
 position = Vector2( 480.508, 1952.11 )
 scale = Vector2( 0.636774, 0.636774 )
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 
 [node name="tile18" type="Sprite" parent="Props/Node2D6"]
 position = Vector2( 532.742, 1950.93 )
 scale = Vector2( 0.636774, 0.636774 )
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 
 [node name="tile19" type="Sprite" parent="Props/Node2D6"]
 position = Vector2( 532.742, 1950.93 )
 scale = Vector2( 0.636774, 0.636774 )
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 
 [node name="tile20" type="Sprite" parent="Props/Node2D6"]
 position = Vector2( 581.81, 1951.32 )
 scale = Vector2( 0.636774, 0.636774 )
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 
 [node name="tile21" type="Sprite" parent="Props/Node2D6"]
 position = Vector2( 632.461, 1952.51 )
 scale = Vector2( 0.636774, 0.636774 )
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 
 [node name="tile22" type="Sprite" parent="Props/Node2D6"]
 position = Vector2( 684.299, 1952.9 )
 scale = Vector2( 0.636774, 0.636774 )
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 
 [node name="tile23" type="Sprite" parent="Props/Node2D6"]
 position = Vector2( 732.575, 1952.51 )
 scale = Vector2( 0.636774, 0.636774 )
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 
 [node name="tile24" type="Sprite" parent="Props/Node2D6"]
 position = Vector2( 783.622, 1952.91 )
 scale = Vector2( 0.636774, 0.636774 )
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 
 [node name="tile25" type="Sprite" parent="Props/Node2D6"]
 position = Vector2( 832.294, 1952.91 )
 scale = Vector2( 0.636774, 0.636774 )
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 
 [node name="tile26" type="Sprite" parent="Props/Node2D6"]
 position = Vector2( 879.383, 1953.3 )
 scale = Vector2( 0.636774, 0.636774 )
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 
 [node name="tile27" type="Sprite" parent="Props/Node2D6"]
 position = Vector2( 928.452, 1952.11 )
 scale = Vector2( 0.636774, 0.636774 )
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 
 [node name="tile28" type="Sprite" parent="Props/Node2D6"]
 position = Vector2( 978.707, 1952.51 )
 scale = Vector2( 0.636774, 0.636774 )
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 
 [node name="tile29" type="Sprite" parent="Props/Node2D6"]
 position = Vector2( 1028.17, 1952.51 )
 scale = Vector2( 0.636774, 0.636774 )
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 
 [node name="tile30" type="Sprite" parent="Props/Node2D6"]
 position = Vector2( 1060.22, 1952.91 )
 scale = Vector2( 0.636774, 0.636774 )
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 
 [node name="Node2D7" type="Node2D" parent="Props"]
 editor/display_folded = true
@@ -527,47 +527,47 @@ editor/display_folded = true
 [node name="tile30" type="Sprite" parent="Props/Node2D7"]
 position = Vector2( 1052.91, 2020.07 )
 scale = Vector2( 0.765475, 0.765475 )
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 
 [node name="tile31" type="Sprite" parent="Props/Node2D7"]
 position = Vector2( 1052.91, 2092.33 )
 scale = Vector2( 0.765475, 0.765475 )
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 
 [node name="tile32" type="Sprite" parent="Props/Node2D7"]
 position = Vector2( 1053.8, 2161.49 )
 scale = Vector2( 0.765475, 0.765475 )
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 
 [node name="tile33" type="Sprite" parent="Props/Node2D7"]
 position = Vector2( 1052.91, 2230.64 )
 scale = Vector2( 0.765475, 0.765475 )
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 
 [node name="tile34" type="Sprite" parent="Props/Node2D7"]
 position = Vector2( 1053.8, 2304.67 )
 scale = Vector2( 0.765475, 0.765475 )
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 
 [node name="tile35" type="Sprite" parent="Props/Node2D7"]
 position = Vector2( 1052.47, 2372.05 )
 scale = Vector2( 0.765475, 0.765475 )
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 
 [node name="tile36" type="Sprite" parent="Props/Node2D7"]
 position = Vector2( 1054.24, 2445.2 )
 scale = Vector2( 0.765475, 0.765475 )
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 
 [node name="tile37" type="Sprite" parent="Props/Node2D7"]
 position = Vector2( 1051.58, 2513.47 )
 scale = Vector2( 0.765475, 0.765475 )
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 
 [node name="tile38" type="Sprite" parent="Props/Node2D7"]
 position = Vector2( 1051.79, 2579.08 )
 scale = Vector2( 0.765475, 0.765475 )
-texture = ExtResource( 4 )
+texture = ExtResource( 16 )
 
 [node name="OneWayPlatform1" parent="Props" instance=ExtResource( 5 )]
 position = Vector2( 967.609, 836.547 )
