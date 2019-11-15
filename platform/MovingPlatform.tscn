@@ -4,6 +4,7 @@
 [ext_resource path="res://platform/moving_platform.png" type="Texture" id=2]
 
 [node name="MovingPlatform" type="Node2D"]
+scale = Vector2( 2.5, 2.5 )
 script = ExtResource( 1 )
 
 [node name="Platform" type="KinematicBody2D" parent="."]
@@ -12,5 +13,6 @@ script = ExtResource( 1 )
 texture = ExtResource( 2 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Platform"]
-polygon = PoolVector2Array( -88, -24, 88, -24, 88, 24, -88, 24 )
-
+position = Vector2( -27.6604, 9.8231 )
+scale = Vector2( 1.39957, 0.925803 )
+polygon = PoolVector2Array( -18.7422, -24.2297, 5.1741, -24.1742, 58.1516, -24.0512, 58.2704, -5.73481, -18.4655, -6.63267 )
