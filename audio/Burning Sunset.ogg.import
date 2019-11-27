@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Burning Sunset.ogg-5136b7d0e601810137d971217b3e28e1.oggstr"
+
+[deps]
+
+source_file="res://audio/Burning Sunset.ogg"
+dest_files=[ "res://.import/Burning Sunset.ogg-5136b7d0e601810137d971217b3e28e1.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

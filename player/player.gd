@@ -7,10 +7,10 @@ const GRAVITY_VEC = Vector2(0, 900)
 const FLOOR_NORMAL = Vector2(0, -1)
 const SLOPE_SLIDE_STOP = 25.0
 const WALK_SPEED = 250 # pixels/sec
-const JUMP_SPEED = 480
+const JUMP_SPEED = 550
 const SIDING_CHANGE_SPEED = 10
 const BULLET_VELOCITY = 1000
-const SHOOT_TIME_SHOW_WEAPON = 0.2
+const SHOOT_TIME_SHOW_WEAPON = 0.3
 var JUMP_BUTTON
 var LEFT_BUTTON
 var RIGHT_BUTTON
@@ -18,7 +18,7 @@ var SHOOT_BUTTON
 var linear_vel = Vector2()
 var shoot_time = 99999 # time since last shot
 var blue_cow_timer = 0
-var souls = 0
+export var souls = 0
 
 var anim = ""
 
@@ -34,7 +34,7 @@ func _physics_process(delta):
 	shoot_time += delta
 	if(blue_cow_timer > 0):
 		blue_cow_timer -= delta
-	print(blue_cow_timer)
+	#print(blue_cow_timer)
 
 	### MOVEMENT ###
 
@@ -71,7 +71,7 @@ func _physics_process(delta):
 		($SoundJump as AudioStreamPlayer2D).play()
 
 	# Shooting
-	if Input.is_action_just_pressed(SHOOT_BUTTON) and shoot_time > 0.4:
+	if Input.is_action_just_pressed(SHOOT_BUTTON) and shoot_time > SHOOT_TIME_SHOW_WEAPON:
 		var bullet = Bullet.instance()
 		bullet.position = ($Sprite/BulletShoot as Position2D).global_position # use node for shoot position
 		bullet.linear_velocity = Vector2(sprite.scale.x * BULLET_VELOCITY, 0)
@@ -107,7 +107,7 @@ func _physics_process(delta):
 			new_anim = "falling"
 
 	if shoot_time < SHOOT_TIME_SHOW_WEAPON:
-		new_anim += "_weapon"
+		new_anim += "_attack"
 
 	if new_anim != anim:
 		anim = new_anim
@@ -123,6 +123,6 @@ func get_item(item_name):
 
 func hit_by_bullet(positionBullet):
 	if(positionBullet.x > position.x):
-		linear_vel.x = -1000
+		linear_vel.x = -5000
 	else:
-		linear_vel.x = 1000
+		linear_vel.x = 5000

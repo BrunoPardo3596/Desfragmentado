@@ -8,6 +8,7 @@ scroll_base_scale = Vector2( 0.7, 0 )
 [node name="Sky" type="ParallaxLayer" parent="."]
 
 [node name="background" type="Sprite" parent="Sky"]
-position = Vector2( 636.933, 491.231 )
-scale = Vector2( 0.908441, 0.908441 )
+modulate = Color( 0.623529, 0.364706, 0.113725, 1 )
+position = Vector2( 719.724, 549.671 )
+scale = Vector2( 0.994681, 1.01666 )
 texture = ExtResource( 1 )
