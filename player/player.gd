@@ -7,16 +7,18 @@ const GRAVITY_VEC = Vector2(0, 900)
 const FLOOR_NORMAL = Vector2(0, -1)
 const SLOPE_SLIDE_STOP = 25.0
 const WALK_SPEED = 250 # pixels/sec
-const JUMP_SPEED = 480
+const JUMP_SPEED = 550
 const SIDING_CHANGE_SPEED = 10
 const BULLET_VELOCITY = 1000
-const SHOOT_TIME_SHOW_WEAPON = 0.2
+const SHOOT_TIME_SHOW_WEAPON = 0.3
 var JUMP_BUTTON
 var LEFT_BUTTON
 var RIGHT_BUTTON
 var SHOOT_BUTTON
 var linear_vel = Vector2()
 var shoot_time = 99999 # time since last shot
+var blue_cow_timer = 0
+export var souls = 0
 
 var anim = ""
 
@@ -27,8 +29,12 @@ var Bullet = preload("res://player/Bullet.tscn")
 
 
 func _physics_process(delta):
+	print(souls)
 	# Increment counters
 	shoot_time += delta
+	if(blue_cow_timer > 0):
+		blue_cow_timer -= delta
+	#print(blue_cow_timer)
 
 	### MOVEMENT ###
 
@@ -48,16 +54,24 @@ func _physics_process(delta):
 	if Input.is_action_pressed(RIGHT_BUTTON):
 		target_speed = 1.2
 
+	if(blue_cow_timer > 0):
+		target_speed *= 1.5
+
 	target_speed *= WALK_SPEED
 	linear_vel.x = lerp(linear_vel.x, target_speed, 0.5)
 
+	
+
 	# Jumping
 	if on_floor and Input.is_action_just_pressed(JUMP_BUTTON):
-		linear_vel.y = -JUMP_SPEED
+		if(blue_cow_timer > 0):
+			linear_vel.y = -JUMP_SPEED * 1.5
+		else:
+			linear_vel.y = -JUMP_SPEED
 		($SoundJump as AudioStreamPlayer2D).play()
 
 	# Shooting
-	if Input.is_action_just_pressed(SHOOT_BUTTON) and shoot_time > 0.4:
+	if Input.is_action_just_pressed(SHOOT_BUTTON) and shoot_time > SHOOT_TIME_SHOW_WEAPON:
 		var bullet = Bullet.instance()
 		bullet.position = ($Sprite/BulletShoot as Position2D).global_position # use node for shoot position
 		bullet.linear_velocity = Vector2(sprite.scale.x * BULLET_VELOCITY, 0)
@@ -82,9 +96,9 @@ func _physics_process(delta):
 		# We want the character to immediately change facing side when the player
 		# tries to change direction, during air control.
 		# This allows for example the player to shoot quickly left then right.
-		if Input.is_action_pressed("move_left") and not Input.is_action_pressed("move_right"):
+		if Input.is_action_pressed(LEFT_BUTTON) and not Input.is_action_pressed(RIGHT_BUTTON):
 			sprite.scale.x = -1
-		if Input.is_action_pressed("move_right") and not Input.is_action_pressed("move_left"):
+		if Input.is_action_pressed(RIGHT_BUTTON) and not Input.is_action_pressed(LEFT_BUTTON):
 			sprite.scale.x = 1
 
 		if linear_vel.y < 0:
@@ -93,7 +107,7 @@ func _physics_process(delta):
 			new_anim = "falling"
 
 	if shoot_time < SHOOT_TIME_SHOW_WEAPON:
-		new_anim += "_weapon"
+		new_anim += "_attack"
 
 	if new_anim != anim:
 		anim = new_anim
@@ -101,11 +115,14 @@ func _physics_process(delta):
 
 func get_item(item_name):
 	print(item_name)
-	if(item_name == "blue_cow"):
-		linear_vel.y = -1000
+	match(item_name):
+		"blue_cow":
+			blue_cow_timer = 5
+		"soul":
+			souls += 1
 
 func hit_by_bullet(positionBullet):
 	if(positionBullet.x > position.x):
-		linear_vel.x = -1000
+		linear_vel.x = -5000
 	else:
-		linear_vel.x = 1000
+		linear_vel.x = 5000

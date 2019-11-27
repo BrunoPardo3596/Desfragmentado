@@ -1,6 +1,6 @@
 [gd_resource type="TileSet" load_steps=14 format=2]
 
-[ext_resource path="res://tiles_demo.png" type="Texture" id=1]
+[ext_resource path="res://platform/tiles_demo.png" type="Texture" id=1]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 32, -24, 32, 32, -32, 32, -32, -24 )
@@ -194,7 +194,7 @@ points = PoolVector2Array( -32, -24, 32, -24, 32, 32, -32, 32 )
 11/name = "ceiling"
 11/texture = ExtResource( 1 )
 11/tex_offset = Vector2( 0, 0 )
-11/modulate = Color( 1, 1, 1, 1 )
+11/modulate = Color( 0.607843, 0.333333, 0.00392157, 1 )
 11/region = Rect2( 384, 64, 64, 64 )
 11/tile_mode = 0
 11/occluder_offset = Vector2( 32, 32 )
