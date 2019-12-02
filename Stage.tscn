@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://audio/Burning Sunset.ogg" type="AudioStream" id=1]
 [ext_resource path="res://TileSet.tres" type="TileSet" id=2]
@@ -15,9 +15,8 @@
 [ext_resource path="res://Camera2D.gd" type="Script" id=13]
 [ext_resource path="res://enemy/Enemy.tscn" type="PackedScene" id=14]
 [ext_resource path="res://background/ParallaxBg.tscn" type="PackedScene" id=15]
-[ext_resource path="res://audio/music.ogg" type="AudioStream" id=16]
-[ext_resource path="res://Fade.gd" type="Script" id=17]
-[ext_resource path="res://Label3.gd" type="Script" id=18]
+[ext_resource path="res://Fade.gd" type="Script" id=16]
+[ext_resource path="res://Label3.gd" type="Script" id=17]
 
 [sub_resource type="DynamicFontData" id=1]
 font_path = "res://AldotheApache.ttf"
@@ -202,16 +201,13 @@ position = Vector2( 2215.3, 1429.39 )
 
 [node name="ParallaxBg" parent="." instance=ExtResource( 15 )]
 
-[node name="Music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 16 )
-
 [node name="Control" type="Control" parent="."]
 visible = false
 margin_left = -266.0
 margin_top = 1840.0
 margin_right = 1365.0
 margin_bottom = 2844.0
-script = ExtResource( 17 )
+script = ExtResource( 16 )
 
 [node name="ColorRect" type="ColorRect" parent="Control"]
 visible = false
@@ -229,7 +225,7 @@ margin_right = 1478.0
 margin_bottom = 924.0
 custom_fonts/font = SubResource( 2 )
 text = "Player 1 Wins"
-script = ExtResource( 18 )
+script = ExtResource( 17 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Control"]
 anims/Fade = SubResource( 3 )
