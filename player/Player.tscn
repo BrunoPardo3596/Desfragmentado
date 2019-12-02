@@ -57,7 +57,7 @@ tracks/1/keys = {
 "values": [ Vector2( -36, -16.747 ) ]
 }
 
-[sub_resource type="Animation" id=13]
+[sub_resource type="Animation" id=3]
 resource_name = "falling_attack"
 length = 0.75
 tracks/0/type = "value"
@@ -121,8 +121,7 @@ tracks/4/keys = {
 "values": [ Vector2( 100, -16.747 ), Vector2( -34.5686, -16.7466 ) ]
 }
 
-[sub_resource type="Animation" id=3]
-resource_name = "falling_weapon"
+[sub_resource type="Animation" id=4]
 length = 0.5
 loop = true
 step = 0.25
@@ -139,7 +138,7 @@ tracks/0/keys = {
 "values": [ 26 ]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=5]
 length = 6.0
 loop = true
 tracks/0/type = "value"
@@ -203,7 +202,7 @@ tracks/4/keys = {
 "values": [ Vector2( -36, -16.747 ) ]
 }
 
-[sub_resource type="Animation" id=12]
+[sub_resource type="Animation" id=6]
 resource_name = "idle_attack"
 length = 0.75
 tracks/0/type = "value"
@@ -267,7 +266,7 @@ tracks/4/keys = {
 "values": [ Vector2( 100, -16.747 ), Vector2( -34.5686, -16.7466 ) ]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=7]
 length = 0.5
 loop = true
 step = 0.25
@@ -284,7 +283,7 @@ tracks/0/keys = {
 "values": [ 25 ]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=8]
 length = 0.75
 loop = true
 tracks/0/type = "value"
@@ -312,7 +311,7 @@ tracks/1/keys = {
 "values": [ Vector2( -36, -16.747 ) ]
 }
 
-[sub_resource type="Animation" id=15]
+[sub_resource type="Animation" id=9]
 resource_name = "jumping_attack"
 length = 0.75
 tracks/0/type = "value"
@@ -376,7 +375,7 @@ tracks/4/keys = {
 "values": [ Vector2( 100, -16.747 ), Vector2( -34.5686, -16.7466 ) ]
 }
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=10]
 length = 0.5
 loop = true
 step = 0.25
@@ -393,7 +392,7 @@ tracks/0/keys = {
 "values": [ 26 ]
 }
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=11]
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -444,7 +443,7 @@ tracks/3/keys = {
 "values": [ Vector2( -36, -16.747 ) ]
 }
 
-[sub_resource type="Animation" id=14]
+[sub_resource type="Animation" id=12]
 resource_name = "run_attack"
 length = 0.75
 tracks/0/type = "value"
@@ -508,7 +507,7 @@ tracks/4/keys = {
 "values": [ Vector2( -34.5686, -16.7466 ), Vector2( 100, -16.747 ), Vector2( -34.5686, -16.7466 ) ]
 }
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=13]
 length = 1.25
 loop = true
 step = 0.25
@@ -525,7 +524,7 @@ tracks/0/keys = {
 "values": [ 5, 6, 7, 8, 9, 5 ]
 }
 
-[sub_resource type="Animation" id=10]
+[sub_resource type="Animation" id=14]
 length = 1.25
 loop = true
 step = 0.25
@@ -542,7 +541,7 @@ tracks/0/keys = {
 "values": [ 10, 11, 12, 13, 14, 5 ]
 }
 
-[sub_resource type="CapsuleShape2D" id=11]
+[sub_resource type="CapsuleShape2D" id=15]
 height = 25.1542
 
 [node name="Player" type="KinematicBody2D"]
@@ -578,18 +577,18 @@ position = Vector2( 18.659, 6.132 )
 [node name="Anim" type="AnimationPlayer" parent="."]
 anims/crouch = SubResource( 1 )
 anims/falling = SubResource( 2 )
-anims/falling_attack = SubResource( 13 )
-anims/falling_weapon = SubResource( 3 )
-anims/idle = SubResource( 4 )
-anims/idle_attack = SubResource( 12 )
-anims/idle_weapon = SubResource( 5 )
-anims/jumping = SubResource( 6 )
-anims/jumping_attack = SubResource( 15 )
-anims/jumping_weapon = SubResource( 7 )
-anims/run = SubResource( 8 )
-anims/run_attack = SubResource( 14 )
-anims/run_weapon = SubResource( 9 )
-anims/standing_weapon_ready = SubResource( 10 )
+anims/falling_attack = SubResource( 3 )
+anims/falling_weapon = SubResource( 4 )
+anims/idle = SubResource( 5 )
+anims/idle_attack = SubResource( 6 )
+anims/idle_weapon = SubResource( 7 )
+anims/jumping = SubResource( 8 )
+anims/jumping_attack = SubResource( 9 )
+anims/jumping_weapon = SubResource( 10 )
+anims/run = SubResource( 11 )
+anims/run_attack = SubResource( 12 )
+anims/run_weapon = SubResource( 13 )
+anims/standing_weapon_ready = SubResource( 14 )
 
 [node name="Camera" type="Camera2D" parent="."]
 visible = false
@@ -598,9 +597,8 @@ limit_left = 0
 limit_top = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2( -5.65198, 9.43184 )
-shape = SubResource( 11 )
+shape = SubResource( 15 )
 
 [node name="SoundJump" type="AudioStreamPlayer2D" parent="."]
 visible = false

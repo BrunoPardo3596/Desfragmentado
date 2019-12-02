@@ -124,7 +124,7 @@ position = Vector2( 1000.93, 2465.88 )
 editor/display_folded = true
 
 [node name="Player" parent="." instance=ExtResource( 7 )]
-position = Vector2( -210.508, 2779.34 )
+position = Vector2( -186.391, 2776.33 )
 script = ExtResource( 8 )
 
 [node name="Player2" parent="." instance=ExtResource( 9 )]
@@ -206,6 +206,7 @@ position = Vector2( 2215.3, 1429.39 )
 stream = ExtResource( 16 )
 
 [node name="Control" type="Control" parent="."]
+visible = false
 margin_left = -266.0
 margin_top = 1840.0
 margin_right = 1365.0
@@ -213,6 +214,7 @@ margin_bottom = 2844.0
 script = ExtResource( 17 )
 
 [node name="ColorRect" type="ColorRect" parent="Control"]
+visible = false
 margin_left = -22.0
 margin_top = -15.2419
 margin_right = 1739.0

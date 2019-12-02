@@ -468,7 +468,6 @@ limit_left = 0
 limit_top = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2( -5.65198, 9.43184 )
 shape = SubResource( 15 )
 
